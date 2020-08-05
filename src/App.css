@@ -218,7 +218,7 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 10px;
+  bottom: 10px;
   right: 40px;
   color: #C5A623;
   border-radius: 100%;
