@@ -96,12 +96,22 @@ class App extends Component {
     this.setState({ error: '' });
   }
 
+  appHome = () => {
+    this.setState({ 
+      showNote: false,
+      notes: [],
+      note: {},
+      newTag: false,
+      error: ''
+     })
+  }
+
   render() {
     const { showNote, notes, note, newTag, error } = this.state;
 
     return (
       <div className="App">
-        <Nav toggleNote={this.toggleNote} showNote={showNote} />
+        <Nav toggleNote={this.toggleNote} showNote={showNote} appHome={this.appHome} />
         {error && <Flash error={error} resetError={this.resetError} />}
         { showNote ? 
           <Note 
