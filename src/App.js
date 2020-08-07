@@ -61,6 +61,15 @@ class App extends Component {
     this.setState({ newTag: true });
   }
 
+  closeTagForm = () => {
+    this.setState({ newTag: false })
+  }
+//  submitTag = (data, id) => {
+//    this.performSubmissionRequest(data, id)
+//    .then((res) => console.log("success"))
+//    .catch((err) => console.log(err.response.data));
+//  }
+
   render() {
     const { showNote, notes, note, newTag } = this.state;
 
@@ -72,6 +81,7 @@ class App extends Component {
             note={note}
             submitNote={this.submitNote}
             showTagForm={this.showTagForm}
+            closeTagForm={this.closeTagForm}
             newTag={newTag}
           /> 
           : 
